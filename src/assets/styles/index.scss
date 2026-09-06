@@ -1,0 +1,5 @@
+// Use Sass modules instead of deprecated @import while preserving load order.
+@use "reset";
+@use "variables";
+@use "general";
+@use "animations";

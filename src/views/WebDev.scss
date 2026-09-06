@@ -1,0 +1,368 @@
+#slideWrapper {
+	list-style: none;
+	width: 100%;
+
+	body {
+		background-color: rgb(var(--primary-bg));
+	}
+
+	.slide {
+		background-size: cover;
+		background-position: center;
+		background-repeat: repeat-y;
+		display: block;
+
+		.slideContent {
+			padding: 2.3vw 5vw;
+			display: block;
+
+			.slideBody {
+				padding: 0px;
+			}
+
+			.slideBody {
+				display: block;
+				border-radius: var(--radius);
+				position: relative;
+				overflow: hidden;
+
+				.slideHeroWrapper {
+					position: absolute;
+					z-index: 10;
+					top: 0px;
+					left: 0px;
+					width: -webkit-fill-available;
+
+					.slideHero {
+						position: relative;
+						display: block;
+						overflow: hidden;
+
+						.slideTitleWrapper {
+							position: absolute;
+							bottom: 0px;
+							right: 0px;
+							width: 100%;
+							text-align: center;
+						}
+
+						.slideTitle {
+							text-transform: capitalize;
+							font-family: var(--headline-font-family);
+							display: inline-block;
+							-webkit-text-stroke-width: 6px;
+							paint-order: stroke;
+							font-size: max(30%, 4em);
+						}
+
+						.image {
+							width: 100%;
+							text-align: center;
+							overflow: hidden;
+
+							svg,
+							.svg {
+								display: block;
+							}
+						}
+
+						#skillLogo,
+						#experienceLogo,
+						#educationLogo,
+						#personalLogo {
+							transition: transform 0.4s;
+							-webkit-transition: transform 0.4s;
+						}
+
+						#stars1,
+						#moon {
+							transition: transform 0.5s;
+							-webkit-transition: transform 0.5s;
+						}
+
+						#skillsky g {
+							transition: opacity 0.3s;
+						}
+
+						#buildings1 {
+							transition: transform 0.3s;
+							-webkit-transition: transform 0.3s;
+						}
+
+						#stars2,
+						#buildings2 {
+							transition: transform 0.7s;
+							-webkit-transition: transform 0.7s;
+						}
+
+						#eduClouds1 path,
+						#eduClouds2 path,
+						#eduClouds3 path,
+						#expsky g {
+							transition: opacity 0.3s;
+						}
+
+						#stars3,
+						#planet1,
+						#planet2,
+						#buildings3 {
+							transition: transform 0.9s;
+							-webkit-transition: transform 0.9s;
+						}
+
+						#rocket {
+							transition: transform 1.2s ease-in;
+							-webkit-transition: transform 1.2s ease-in;
+						}
+
+						#experienceGB g {
+							transition: opacity 0.6s;
+						}
+
+						#rightleaf,
+						#leftleaf {
+							transition: transform 0.8s ease-in;
+							-webkit-transition: transform 0.8s ease-in;
+						}
+
+						// #rightleaf {
+						// }
+
+						// #leftleaf {
+						// }
+
+						#tiger {
+							transition: transform 0.4s;
+							-webkit-transition: transform 0.4s;
+						}
+
+						#giraffehead {
+							transition: transform 0.3s ease-in-out;
+							-webkit-transition: transform 0.3s ease-in-out;
+						}
+					}
+				}
+
+				.slideText {
+					padding: 2.3vw 5vw;
+					overflow: hidden;
+					position: relative;
+					z-index: 1;
+					font-size: 1.2em;
+				}
+				p {
+					margin-bottom: 0.75vw;
+				}
+
+				.start {
+					text-align: left;
+				}
+				.center {
+					text-align: center;
+				}
+				.end {
+					text-align: right;
+				}
+				.bold {
+					font-weight: bold;
+				}
+				.italic {
+					font-style: italic;
+				}
+				.underline {
+					text-decoration: underline;
+				}
+				.section {
+					padding-top: 3vw;
+					padding-bottom: 4.5vw;
+					display: block;
+					width: 100%;
+				}
+				.company {
+					text-align: center;
+				}
+				.companyName {
+					font-size: 1.5em;
+				}
+				.role {
+					font-size: 1.3em;
+				}
+				.project {
+					font-weight: bold;
+					display: block;
+				}
+				.subSection {
+					width: 100%;
+					display: block;
+					padding: 2vw 0px;
+				}
+				.subSection:not(:last-child) {
+					margin-bottom: 20px;
+				}
+				.footNote {
+					font-size: 0.8em;
+					text-indent: 3vw;
+					font-style: italic;
+					padding: 10px 10%;
+					width: 100%;
+					display: block;
+				}
+
+				.description p:first-of-type {
+					text-indent: 3vw;
+				}
+				.subSectionTitle {
+					font-weight: bold;
+					font-size: 1.15em;
+					margin-bottom: 5px;
+				}
+
+				// @media only screen and (max-width: 480px) {
+				// }
+
+				// @media only screen and (min-width: 481px) {
+				// }
+
+				@media only screen and (max-width: 550px) {
+					.skillList {
+						display: block;
+					}
+				}
+
+				@media only screen and (min-width: 551px) {
+					.skillList {
+						display: grid;
+						grid-template-columns: repeat(2, 1fr);
+						grid-template-rows: auto;
+						grid-column-gap: 3vw;
+					}
+				}
+
+				.skillList {
+					li {
+						list-style: none;
+						position: relative;
+						display: -webkit-flex;
+						display: flex;
+						-webkit-flex-direction: column;
+						flex-direction: column;
+						-webkit-flex-wrap: nowrap;
+						flex-wrap: nowrap;
+						-webkit-justify-content: flex-start;
+						justify-content: flex-start;
+						-webkit-align-content: flex-start;
+						align-content: flex-start;
+						-webkit-align-items: center;
+						align-items: center;
+						gap: 2%;
+					}
+				}
+				.skillTitle {
+					display: block;
+					font-size: 2em;
+					text-align: center;
+					color: rgb(7, 234, 137);
+					-webkit-text-stroke: 3px rgb(45, 20, 104);
+					paint-order: stroke;
+				}
+				.skillDesc {
+					margin-bottom: 1vh;
+					text-indent: 3vw;
+					display: block;
+					text-align: justify;
+				}
+				.skillRankWrapper {
+					width: 100%;
+					max-width: 100%;
+					display: block;
+					margin-bottom: 2vh;
+				}
+				.skillRank {
+					margin: 0px auto;
+					width: 50%;
+					position: relative;
+					display: block;
+					overflow: hidden;
+					border-radius: var(--radius);
+					box-shadow: 0px 0px 10px 3px rgba(74, 41, 152, 0.5);
+					border: 0.5px solid rgb(74, 41, 152);
+
+					img {
+						display: block;
+						z-index: 3;
+						position: relative;
+						border-radius: var(--radius);
+					}
+					.rankValue {
+						position: absolute;
+						bottom: 0px;
+						left: 0px;
+						width: 0px;
+						max-width: calc(100% - 4px);
+						height: calc(100% - 4px);
+						background-color: #fff172;
+						border-radius: var(--radius);
+						display: block;
+						margin: 2px;
+						z-index: 2;
+					}
+					.rankBG {
+						position: absolute;
+						top: 0px;
+						bottom: 0px;
+						width: calc(100% - 4px);
+						max-width: calc(100% - 4px);
+						height: calc(100% - 4px);
+						border-radius: var(--radius);
+						background-color: rgb(92, 34, 162);
+						display: block;
+						margin: 2px;
+						z-index: 1;
+					}
+				}
+
+				.accomplishments {
+					padding: 0px 0px 0px 20px;
+					list-style: revert;
+					margin-bottom: 0px;
+					li {
+						margin-bottom: 10px;
+						list-style: disc;
+						display: revert;
+					}
+					li:last-of-type {
+						margin-bottom: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	#personalSlide {
+		p {
+			text-indent: 3vw;
+		}
+	}
+}
+.menu {
+	background-color: #fff172;
+	ul {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		li {
+			display: block;
+			text-align: center;
+			a {
+				text-decoration: none;
+				padding: 20px 0;
+				display: block;
+				color: rgb((var(--primary-text)));
+				font-family: var(--headline-font-family);
+				-webkit-text-stroke: 3px rgb((var(--invert-text)));
+				paint-order: stroke;
+				font-size: max(30%, 4em);
+			}
+		}
+	}
+}

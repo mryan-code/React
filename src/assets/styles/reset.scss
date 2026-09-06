@@ -1,0 +1,27 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+body:not(#mainContent ul),
+html:not(#mainContent ul) {
+	margin: 0;
+	padding: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.Vue-Toastification__container.bottom-left {
+	bottom: 45px !important;
+	left: 1rem !important;
+}

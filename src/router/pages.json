@@ -1,0 +1,100 @@
+[
+	{
+		"path": "/login",
+		"name": "Login",
+		"meta": {
+			"page_id": "1",
+			"auth_required": 2,
+			"icon": null,
+			"auth_level": 0,
+			"slug": "login",
+			"location": 1
+		},
+		"component": "../views/Login.tsx",
+		"props": true
+	},
+	{
+		"path": "/",
+		"name": "Home",
+		"meta": {
+			"page_id": "2",
+			"auth_required": 3,
+			"icon": null,
+			"auth_level": 3,
+			"slug": "",
+			"location": 1
+		},
+		"component": "../views/Home.tsx",
+		"props": true
+	},
+	{
+		"path": "/storm-zero",
+		"name": "Storm Zero",
+		"meta": {
+			"page_id": "3",
+			"auth_required": 1,
+			"icon": null,
+			"auth_level": 3,
+			"slug": "storm-zero",
+			"location": 1
+		},
+		"component": "../views/StormZero.tsx",
+		"props": true
+	},
+	{
+		"path": "/error",
+		"name": "Error",
+		"meta": {
+			"page_id": "4",
+			"auth_required": 3,
+			"icon": null,
+			"auth_level": 0,
+			"slug": "error",
+			"location": 0
+		},
+		"component": "../views/Error.tsx",
+		"props": true
+	},
+	{
+		"path": "/portfolio",
+		"name": "Portfolio",
+		"meta": {
+			"page_id": "5",
+			"auth_required": 3,
+			"icon": null,
+			"auth_level": 3,
+			"slug": "portfolio",
+			"location": 1
+		},
+		"component": "../views/Portfolio.tsx",
+		"props": true
+	},
+	{
+		"path": "/visual-resume",
+		"name": "Visual Resume",
+		"meta": {
+			"page_id": "7",
+			"auth_required": 3,
+			"icon": null,
+			"auth_level": 3,
+			"slug": "visual-resume",
+			"location": 1
+		},
+		"component": "../views/WebDev.tsx",
+		"props": true
+	},
+	{
+		"path": "/osint",
+		"name": "OSINT",
+		"meta": {
+			"page_id": "6",
+			"auth_required": 1,
+			"icon": null,
+			"auth_level": 3,
+			"slug": "osint",
+			"location": 1
+		},
+		"component": "../views/OSINT.tsx",
+		"props": true
+	}
+]

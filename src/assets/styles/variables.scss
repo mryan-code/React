@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gloria+Hallelujah&family=Raleway:ital,wght@0,100..900;1,100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
+:root {
+	--header-font-family: "Teachers", sans-serif;
+	--headline-font-family: "Gloria Hallelujah", cursive;
+	--heading-font-family: "Gloria Hallelujah", cursive;
+	--body-font-family: "Raleway", sans-serif;
+	--radius: 10px;
+	--duration: 0.4s;
+	--function: cubic-bezier(0.42, 0, 0.58, 1);
+	--menu-width: 220px;
+	--collapsed-menu-width: 95px;
+	--header-height: 85px;
+	--padding: 10px;
+	--call-sidebar-width: 300px;
+	--logo-bg: #ffffff;
+	--selected-menu: #ffffff;
+
+	--inverted-text: #ffffff;
+	--divider: #adadad;
+	--hover-bg: #efefef88;
+	--button-text: #ffffff;
+
+	--body-bg: #ffffff;
+	--body-bg-mid: #f5f5f5;
+	--body-bg-section: #fafafa;
+	--section-accent: #d7d7d7;
+	--body-bg-readonly: #f5f5f5;
+	--body-bg-disabled: #b5b5b5;
+	--body-text: #000000;
+	--body-text-sub: #383838;
+	--body-drop-shadow: 0 3px 3px 0px #00000010;
+	--body-inner-shadow: inset 0 0 5px 0px #00000040;
+	--body-text-shadow: 0 0 10px #00000040;
+	--dialog-drop-shadow: 0 0 10px 0px #639fcd99;
+	--primary-green: #00c950;
+	--overlay-bg: rgba(0, 0, 0, 0.05);
+	--header-drop-shadow: 0 0 10px 0px #639fcd99;
+
+	//header
+	--header-bg: #151a1d;
+	--header-accent: #000000;
+
+	//scheme
+	--primary: #b82427;
+	--primary-highlight: #b8242799;
+	--primary-accent: #650204;
+	--primary-text: #ffffff;
+	--primary-inner-shadow: inset 0 0 6px 0px #650204;
+	--primary-text-shadow: 0 0 10px #650204;
+	--primary-drop-shadow: 0 3px 3px 0px #650204;
+	--secondary: #7e0d0f;
+	--secondary-highlight: #7e0d0f99;
+	--secondary-accent: #3a0b0c;
+	--secondary-text: #c8c8c8;
+	--secondary-inner-shadow: inset 0 0 6px 0px #3a0b0c;
+	--secondary-text-shadow: 0 0 10px #3a0b0c;
+	--secondary-drop-shadow: 0 0 3px 0px #3a0b0c;
+	--tertiary: #0b6d2d;
+	--tertiary-highlight: #68a97f99;
+	--tertiary-accent: #08451f;
+	--tertiary-text: #ffffff;
+	--tertiary-inner-shadow: inset 0 0 6px 0px #08451f;
+	--tertiary-text-shadow: 0 0 10px #08451f;
+	--tertiary-drop-shadow: 0 0 3px 0px #08451f;
+
+	--disabled-button: #757575;
+	--disabled-button-text: #ffffff;
+	--disabled-button-inner-shadow: inset 0 0 6px 0px #b5b5b5;
+	--disabled-button-text-shadow: 0 0 10px #b5b5b5;
+	--disabled-button-drop-shadow: 0 0 3px 0px #b5b5b5;
+	--disabled-button-accent: #b5b5b5;
+
+	--disabled-input: #ececec;
+	--disabled-input-text: #747474;
+	// --disabled-input-inner-shadow: inset 0 0 6px 0px #b5b5b5;
+	// --disabled-input-text-shadow: 0 0 10px #b5b5b5;
+	// --disabled-input-drop-shadow: 0 0 3px 0px #b5b5b5;
+	--disabled-input-accent: #b5b5b5;
+
+	--input: #fdfdfd;
+	--input-text: #000000;
+	--input-inner-shadow: inset 0 0 6px 0px #fdfdfd;
+	--input-text-shadow: 0 0 10px #fdfdfd;
+	--input-drop-shadow: 0 0 3px 0px #fdfdfd;
+	--input-accent: #929292;
+	--selected-bg: #dedede;
+	--selected-border: 1px solid #929292;
+
+	//accents(grays)
+	--accent-1: #636363;
+	--accent-2: #7f7f7f;
+	--accent-3: #9a9a9a;
+	--accent-4: #a8a8a8;
+	--accent-5: #c1c1c1;
+	--accent-6: #f6f6f6;
+
+	//alerts
+	--success: #1d8d4b;
+	--success-accent: #176236;
+	--success-text: #ffffff;
+	--success-inner-shadow: inset 0 0 2px 1px #176236;
+	--success-text-shadow: 0 10px 10px #176236;
+	--success-drop-shadow: 0 0 10px 0px #176236;
+	--danger: #cc2222;
+	--danger-bg: #ffd0d0;
+	--danger-accent: #940202;
+	--danger-text: #ffffff;
+	--danger-inner-shadow: inset 0 0 5px 0.5px #ab0c0c;
+	--danger-text-shadow: 2 3 3px #940202;
+	--danger-drop-shadow: 0 0 10px 0px #860202;
+	--warning: #f29949;
+	--warning-accent: #a64e01;
+	--warning-text: #ffffff;
+	--warning-inner-shadow: inset 0 0 5px 0.5px #da7720;
+	--warning-text-shadow: 2 3 3px #a64e01;
+	--warning-drop-shadow: 0 0 10px 0px #da7720;
+	--info: #79bcef;
+	--info-accent: #4985d7;
+	--info-text: #ffffff;
+	--info-inner-shadow: inset 0 0 2px 1px #4985d7;
+	--info-text-shadow: 0 0 15px #4985d7;
+	--info-drop-shadow: 0 0 10px 0px #4985d7;
+
+	//tables && lists
+	--table-row-odd: #f8f8f8;
+	--table-row-even: #ffffff;
+	--table-row-accent: #c0c0c0;
+	--table-row-highlight: #fcffcc;
+
+	// converation threads
+	--prompt-bg: #f8f8f8;
+	--prompt-text: #000000;
+	--prompt-inner-shadow: inset 0 0 6px 0px #f8f8f8;
+	--prompt-text-shadow: 0 0 10px #f8f8f8;
+	--prompt-drop-shadow: 0 0 3px 0px #f8f8f8;
+	--prompt-accent: #c0c0c0;
+	--prompt-highlight: #fcffcc;
+	--response-bg: #f8f8f8;
+	--response-text: #000000;
+	--response-inner-shadow: inset 0 0 6px 0px #f8f8f8;
+	--response-text-shadow: 0 0 10px #f8f8f8;
+	--response-drop-shadow: 0 0 3px 0px #f8f8f8;
+	--response-accent: #c0c0c0;
+	--response-highlight: #fcffcc;
+
+	// notifications
+	--notification-bg: #ededed;
+	--notification-text: #000000;
+	--notification-unread: #e1e1e1;
+	--notification-unread-text: #b75e5e;
+	--notification-highlight: #fcffcc;
+
+	// JSON
+	--json-key: #d73a49;
+	--json-string: #257831;
+	--json-number: #1059ad;
+	--json-boolean: #e8de21;
+	--json-null: #6a737d;
+}
+
+[data-theme="dark"] {
+	--selected-menu: #c2c2c2;
+	--logo-bg: #555252;
+	--inverted-text: #ffffff;
+	--divider: #000000;
+	--hover-bg: #efefef88;
+	--button-text: #ffffff;
+
+	--body-bg: #131313;
+	--body-bg-mid: #202020;
+	--body-bg-section: #151a1d;
+	--body-bg-readonly: #202020;
+	--body-bg-disabled: #484848;
+	--body-text: #c8c5c5;
+	--body-text-sub: #383838;
+	--body-drop-shadow: 0 3px 3px 0px #00000010;
+	--body-inner-shadow: inset 0 0 5px 0px #00000040;
+	--body-text-shadow: 0 0 10px #00000040;
+	--dialog-drop-shadow: 0 0 10px 0px #639fcd99;
+	--primary-green: #00c950;
+	--overlay-bg: rgba(0, 0, 0, 0.05);
+
+	//buttons
+	--disabled-button: #414141;
+	--disabled-button-text: #ffffff;
+	--disabled-button-inner-shadow: inset 0 0 6px 0px #020202;
+	--disabled-button-text-shadow: 0 0 10px #020202;
+	--disabled-button-drop-shadow: 0 0 3px 0px #020202;
+	--disabled-button-accent: #020202;
+
+	//inputs
+	--disabled-input: #484848;
+	--disabled-input-text: #ffffff;
+	--disabled-input-inner-shadow: inset 0 0 6px 0px #484848;
+	--disabled-input-text-shadow: 0 0 10px #484848;
+	--disabled-input-drop-shadow: 0 0 3px 0px #484848;
+	--disabled-input-accent: #484848;
+
+	--input: #202020;
+	--input-text: #ffffff;
+	--input-inner-shadow: inset 0 0 6px 0px #202020;
+	--input-text-shadow: 0 0 10px #202020;
+	--input-drop-shadow: 0 0 3px 0px #202020;
+	--input-accent: #484848;
+	--selected-bg: #4e4e4e;
+	--selected-border: 0.5px solid #656565;
+	--input-placeholder: #484848;
+
+	//accents(grays)
+	--accent-1: #636363;
+	--accent-2: #949494;
+	--accent-3: #bcbbbb;
+	--accent-4: #e6e6e6;
+	--accent-5: #f6f6f6;
+
+	//alerts
+	--success: #1d8d4b;
+	--success-accent: #176236;
+	--success-text: #ffffff;
+	--success-inner-shadow: inset 0 0 4px 2px #176236;
+	--success-drop-shadow: 0 0 10px 0px #176236;
+	--danger: #cc2222;
+	--danger-accent: #940202;
+	--danger-text: #ffffff;
+	--danger-inner-shadow: inset 0 0 4px 2px #940202;
+	--danger-drop-shadow: 0 0 10px 0px #940202;
+	--warning: #f29949;
+	--warning-accent: #c45d00;
+	--warning-text: #ffffff;
+	--warning-inner-shadow: inset 0 0 4px 2px #c45d00;
+	--warning-drop-shadow: 0 0 10px 0px #c45d00;
+	--info: #79bcef;
+	--info-accent: #4985d7;
+	--info-text: #ffffff;
+	--info-inner-shadow: inset 0 0 4px 2px #4985d7;
+	--info-drop-shadow: 0 0 10px 0px #4985d7;
+
+	//tables && lists
+	--table-row-odd: #202020;
+	--table-row-even: #2a2a2a;
+	--table-row-accent: #484848;
+	--table-row-highlight: #362c00;
+
+	// modal dialogs
+	--dialogue-accent: #000000;
+	--dialogue-bg: #272727;
+	--dialogue-text: #909090;
+	--dialogue-btn: #414141;
+	--dialogue-btn-text: #ffffff;
+	--dialogue-inner-shadow: inset 0 0 6px 0px #f4a733;
+	--dialogue-text-shadow: 0 0 3px #f4a733;
+	--dialogue-drop-shadow: 0 0 10px 0px #f4a733;
+	--dialogue-progress: #ffffff;
+
+	// notifications
+	--notification-bg: #f5f5f5;
+	--notification-text: #000000;
+	--notification-unread: #e1e1e1;
+	--notification-unread-text: #b75e5e;
+	--notification-highlight: #fcffcc;
+
+	// colours
+	--primary-text: #c2c2c2;
+	--secondary-text: #c8c8c8;
+	--tertiary-text: #c2c2c2;
+
+	// converation threads
+	--prompt-bg: #0915a1;
+	--prompt-text: #c5c5c5;
+	--prompt-accent: #06107d;
+	--response-bg: #076525;
+	--response-text: #c5c5c5;
+	--response-accent: #124422;
+	--date-text: #d1d1d1;
+	--time-text: #6e6e6e;
+}

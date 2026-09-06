@@ -1,0 +1,17 @@
+- Store plan.plan.md file in the ai_plans directory, and name the file with the date and a brief description of the plan.
+
+  - eg: "2025-12-08_modify_notes.vue.md"
+  - the file should be a markdown file, with the following sections:
+    - Title
+    - Description`(brief description of the plan)`
+    - User`(GIT username)`
+    - Date`(YYYY-MM-DD)`
+    - Prompt used`(verbatim)`
+    - Code
+    - Testing Script`(npm test -- --testNamePattern="encryptHash")`
+  - include the plan in the file, and a brief description of the plan, and the GIT username of the user who created the plan.
+  - include the code that was modified, and a brief description of the code that was modified.
+  - include the test file that was modified, and a brief description of the test file that was modified.
+  - include the code that was added, and a brief description of the code that was added.
+  - include the test file that was added, and a brief description of the test file that was added.
+  - if the directory does not exist, create it.
