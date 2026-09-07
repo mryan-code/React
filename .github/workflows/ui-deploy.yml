@@ -11,12 +11,12 @@ jobs:
     # Use DEPLOY_RUNNER repo variable (for example: self-hosted) when the target host is private-network only.
     runs-on: 'ubuntu-latest'
     env:
-      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST || 'dev-domain.duckdns.org' }}
-      DEPLOY_PORT: ${{ secrets.DEPLOY_PORT || '22' }}
-      DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME || 'inkt'}}
-      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH || '~/Documents/Personal/storm_zero/ui' }}
-      API_PORT: ${{ secrets.API_PORT || '9876' }}
-      API_PATH: ${{ secrets.API_PATH || '~/Documents/Personal/storm_zero/api' }}
+      DEPLOY_HOST: 'dev-domain.duckdns.org'
+      DEPLOY_PORT: '22'
+      DEPLOY_USERNAME: 'inkt'
+      DEPLOY_PATH: '~/Personal/React'
+      API_PORT: '9876'
+      API_PATH: '~/Personal/API'
       SSH_KEEPALIVE_OPTIONS: "-o ServerAliveInterval=30 -o ServerAliveCountMax=4 -o TCPKeepAlive=yes"
 
     steps:
@@ -48,7 +48,7 @@ jobs:
       # Stop the running server if it is running
       - name: Stop the running server if it is running
         env:
-          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+          SERVER_PORT: '1345'
         run: |
           set -euo pipefail
           echo "Stopping remote server if it is running."
@@ -301,7 +301,7 @@ jobs:
       # Deploy to HOST via Rsync
       - name: Deploy to HOST via Rsync
         env:
-          RSYNC_PORT: ${{ secrets.RSYNC_PORT || '873' }}
+          RSYNC_PORT: '873'
         run: |
           set -euo pipefail
           deploy_path="${DEPLOY_PATH%/}"
@@ -372,8 +372,11 @@ jobs:
             --delete \
             --exclude='.git' \
             --exclude='.github' \
+            --exclude='.env' \
+            --exclude='certificates' \
             --filter='P .env' \
             --filter='P node_modules/' \
+            --filter='P certificates/' \
             --rsync-path="$remote_rsync_path" \
             -e "ssh $SSH_KEEPALIVE_OPTIONS -p $DEPLOY_PORT -o ControlMaster=auto -o ControlPath=$control_path -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o BatchMode=yes -o PasswordAuthentication=no" \
             ./ \
@@ -438,7 +441,7 @@ jobs:
       # Start the server
       - name: Start the server
         env:
-          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+          SERVER_PORT: '1345'
         run: |
           set -euo pipefail
           echo "Starting server on HOST."
